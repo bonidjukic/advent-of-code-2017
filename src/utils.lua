@@ -19,4 +19,16 @@ function _M.read_file(path)
   return c
 end
 
+function _M.sort_string(str)
+  local t = {}
+
+  for i = 1, #str do
+    t[i] = str:sub(i, i)
+  end
+
+  table.sort(t)
+
+  return table.concat(t)
+end
+
 return _M
