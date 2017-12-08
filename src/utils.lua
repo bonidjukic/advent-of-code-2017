@@ -31,4 +31,17 @@ function _M.sort_string(str)
   return table.concat(t)
 end
 
+function _M.t_max_pos(t)
+  local max, pos = t[1], 1
+
+  for k, v in ipairs(t) do
+    if v > max then
+      max = v
+      pos = k
+    end
+  end
+
+  return max, pos
+end
+
 return _M
