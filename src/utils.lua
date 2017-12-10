@@ -12,6 +12,10 @@ function _M.split(str, sep)
   return result
 end
 
+function _M.trim(str)
+  return (str:gsub("^%s*(.-)%s*$", "%1"))
+end
+
 function _M.read_file(path)
   local f = assert(io.open(path, 'r'))
   local c = f:read('*all')
@@ -42,6 +46,18 @@ function _M.t_max_pos(t)
   end
 
   return max, pos
+end
+
+function _M.t_keys_cnt(t)
+  local cnt = 0
+  for _ in pairs(t) do cnt = cnt + 1 end
+  return cnt
+end
+
+function _M.t_copy(t)
+  local cp = {}
+  for k, v in pairs(t) do cp[k] = v end
+  return setmetatable(cp, getmetatable(t))
 end
 
 return _M
