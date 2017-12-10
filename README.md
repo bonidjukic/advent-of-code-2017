@@ -10,3 +10,4 @@ http://adventofcode.com
 - Day 5 - solved
 - Day 6 - solved
 - Day 7 - solved
+- Day 8 - solved
