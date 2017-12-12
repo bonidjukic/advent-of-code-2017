@@ -11,3 +11,4 @@ http://adventofcode.com
 - Day 6 - solved
 - Day 7 - solved
 - Day 8 - solved
+- Day 9 - solved
