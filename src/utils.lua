@@ -60,4 +60,13 @@ function _M.t_copy(t)
   return setmetatable(cp, getmetatable(t))
 end
 
+function _M.t_reverse(t)
+  local rev = {}
+  for k, v in ipairs(t) do
+    rev[#t + 1 - k] = v
+  end
+
+  return rev
+end
+
 return _M
